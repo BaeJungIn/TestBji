@@ -63,7 +63,7 @@ public class Test extends Frame implements Runnable, MouseListener{
 			}
 		}else {
 			y++;
-			if(y>=d.height-20) {
+			if(y>=d.height-20) { 
 				tk.beep();
 				y=d.height-20;
 				yOrient = true;
