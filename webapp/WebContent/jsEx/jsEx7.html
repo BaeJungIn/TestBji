@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function filterNumber(event){
+		var code = event.keyCode;
+		
+		
+		
+		if(code > 47 && code < 58){
+			alert(code);
+			return;
+		}
+		var result = event.prevantDefault(); //key event만 막음
+	}
+</script>
+</head>
+<body onload="document.f.t.focus()">
+	<h3>키 이벤트의 사용법</h3>
+	<form name = "f">
+		입력 : <input type="text" name="t" value="" onkeydown="filterNumber(event);"><br>
+	</form>
+	
+</body>
+</html>

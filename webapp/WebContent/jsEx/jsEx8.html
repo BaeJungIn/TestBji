@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function filterShortcut(event){
+		var code = event.keyCode;
+		
+		
+		/* if(code == 9 || code == 36 || code == 35 || code == 37 || code == 39 || code == 8 || code == 46 || ){
+			return; 
+		} */
+		
+		
+		
+		if(code > 47 && code < 58){
+			return;
+		}
+		
+		/* 값을 입력할때 다양한 단축키 사용 가능
+		이런 단축키 지우너하기 위해 ctrl 또는 alt키가 눌러진 상태라면 입력을 허용한다. */
+		
+		if(event.ctrlKey || evnet.altKey){
+			return;
+		}
+		event.preventDefault();
+	}
+</script>
+</head>
+<body>0
+	<h3>키 이벤트의 사용법</h3>
+	<form name="f">
+		입력 : <input type="text" name="t" value="" onkeydown="filterShortcut(event);"><br>
+	</form>
+</body>
+</html>
